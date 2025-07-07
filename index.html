@@ -518,37 +518,38 @@
         };
     }
     </script>
-	
 	<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const contactForm = document.getElementById("contact-form");
+document.addEventListener("DOMContentLoaded", function() {
+  const contactForm = document.getElementById("contact");
 
-      contactForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
 
-        const formData = new FormData(this);
+    const formData = new FormData(this);
 
-        fetch("https://formspree.io/f/xgegyagj", {
-          method: "POST",
-          headers: {
-            "Accept": "application/json"
-          },
-          body: formData
-        })
-        .then(response => {
-          if (response.ok) {
-            this.reset(); // Clear the form
-            alert("Your message has been sent. Thank you!");
-          } else {
-            alert("Error: Form submission failed. Please email directly to jtabascio@gmail.com");
-          }
-        })
-        .catch(error => {
-          console.error("Error:", error);
-          alert("Error: An unexpected error occurred. Please email directly to jtabascio@gmail.com");
-        });
-      });
+    fetch("https://formspree.io/f/xgegyagj", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        this.reset(); // Clear the form
+        alert("Your message has been sent. Thank you!");
+      } else {
+        alert("Error: Form submission failed. Please email directly to tabashdesignworks@gmail.com");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Error: An unexpected error occurred. Please email directly to tabashdesignworks@gmail.com");
     });
-    </script>
+  });
+});
+</script>
+
+	
 </body>
 </html>
