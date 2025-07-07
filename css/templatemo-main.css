@@ -279,7 +279,7 @@ nav a:hover::before {
 .slides .slide .content::after {
   content: "";
   display: block;
-  height: 60px;
+  height: 0px;
 }
 
 .content::-webkit-scrollbar {
