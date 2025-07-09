@@ -885,3 +885,10 @@ nav a:hover::before {
 	  	padding: 15px 20px;
 	}
 }
+
+@media (max-width: 749px) {
+  .second-content .fb-btn {
+    display: block;
+    margin-top: 15px;
+  }
+}
