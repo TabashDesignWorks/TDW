@@ -887,8 +887,14 @@ nav a:hover::before {
 }
 
 @media (max-width: 749px) {
+  .second-content .main-btn,
   .second-content .fb-btn {
     display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .second-content .fb-btn {
     margin-top: 15px;
   }
 }
