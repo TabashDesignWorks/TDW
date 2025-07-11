@@ -21,6 +21,9 @@
 		<link rel="icon" href="img/mini_logo.png" type="image/png">
 		<link rel="shortcut icon" href="img/mini_logo.png" type="image/png">
 	<link rel="apple-touch-icon" href="img/mini_logo.png">
+		<!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     </head>
 
 <body>
@@ -227,21 +230,40 @@
             <div class="content fourth-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="item">
-                                <div class="thumb">
-                                    <a href="img/first_big_item.jpg" data-lightbox="image-1"><div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number One</h2>
-                                            <p>Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem.</p>
-                                        </div>
-                                    </div></a>
-                                    <div class="image">
-                                        <img src="img/first_item.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <div class="col-md-4 col-sm-6">
+  <div class="item">
+    <div class="thumb">
+      <a 
+        data-fancybox 
+        data-src="#custom-lightbox-1" 
+        data-caption="Honda/Acura B to K-Series Throttle Body to Manifold Adapter"
+        href="javascript:;">
+        <div class="hover-effect">
+          <div class="hover-content">
+            <h2>Honda/Acura B to K-Series Throttle Body to Manifold Adapter</h2>
+            <p>Custom solution for customer wanting to retrofit aftermarket components on their vehicle.</p>
+          </div>
+        </div>
+      </a>
+      <div class="image">
+        <img src="img/first_item.jpg" alt="Adapter Preview">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Fancybox content -->
+<div style="display: none;" id="custom-lightbox-1">
+  <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+    <img src="img/first_big_item.jpg" style="max-width: 50%; height: auto; border-radius: 8px;" alt="Full Size">
+    <div style="max-width: 45%;">
+      <h2>Honda/Acura B to K-Series Throttle Body to Manifold Adapter</h2>
+      <p>Custom solution for customer wanting to retrofit aftermarket components on their vehicle.</p>
+    </div>
+  </div>
+</div>
+
+
                         <div class="col-md-4 col-sm-6">
                             <div class="item">
                                 <div class="thumb">
@@ -548,6 +570,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<!-- Fancybox JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 	
 </body>
