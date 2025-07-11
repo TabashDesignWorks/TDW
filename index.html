@@ -23,6 +23,22 @@
 	<link rel="apple-touch-icon" href="img/mini_logo.png">
 		<!-- Fancybox CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+		<style>
+  /* Remove the default white box from Fancybox content */
+  .fancybox__content {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Optional: set the body or content background if you want a dark overlay */
+  .fancybox-content-wrapper {
+    background-color: rgba(0, 0, 0, 0.7); /* Match your transparent box style */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
 
     </head>
 
@@ -230,13 +246,13 @@
             <div class="content fourth-content">
                 <div class="container-fluid">
                     <div class="row">
-                       <div class="col-md-4 col-sm-6">
+ <!-- Trigger and preview box -->
+<div class="col-md-4 col-sm-6">
   <div class="item">
     <div class="thumb">
       <a 
         data-fancybox 
         data-src="#custom-lightbox-1" 
-        data-caption="Honda/Acura B to K-Series Throttle Body to Manifold Adapter"
         href="javascript:;">
         <div class="hover-effect">
           <div class="hover-content">
@@ -252,16 +268,60 @@
   </div>
 </div>
 
-<!-- Hidden Fancybox content -->
+<!-- Hidden lightbox content -->
 <div style="display: none;" id="custom-lightbox-1">
-  <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
-    <img src="img/first_big_item.jpg" style="max-width: 50%; height: auto; border-radius: 8px;" alt="Full Size">
-    <div style="max-width: 45%;">
+  <div class="fancybox-content-wrapper transparent-box">
+    <img src="img/first_big_item.jpg" alt="Full Size">
+    <div class="fancybox-description">
       <h2>Honda/Acura B to K-Series Throttle Body to Manifold Adapter</h2>
       <p>Custom solution for customer wanting to retrofit aftermarket components on their vehicle.</p>
     </div>
   </div>
 </div>
+
+<!-- Styling -->
+<style>
+  .fancybox-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .transparent-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Match your page’s dark translucent background */
+    color: white;
+  }
+
+  .fancybox-content-wrapper img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1 1 300px;
+  }
+
+  .fancybox-description {
+    max-width: 45%;
+    flex: 1 1 300px;
+  }
+
+  @media (max-width: 768px) {
+    .fancybox-content-wrapper {
+      flex-direction: column;
+    }
+
+    .fancybox-content-wrapper img,
+    .fancybox-description {
+      max-width: 100%;
+    }
+  }
+</style>
+
+
 
 
                         <div class="col-md-4 col-sm-6">
