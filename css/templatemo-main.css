@@ -210,7 +210,6 @@ nav ul {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
-
 nav ul li {
 	margin: 25px 0px;
 }
@@ -899,4 +898,3 @@ nav a:hover::before {
     margin-top: 15px;
   }
 }
-
